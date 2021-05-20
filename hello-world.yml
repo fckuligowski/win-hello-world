@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Hello World
+      win_shell: |
+        Write-Host 'Hello World!'
+      register: hello_world
+
+    - debug:
+        var: hello_world
